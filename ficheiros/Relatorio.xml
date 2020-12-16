@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--<?xml-stylesheet type="text/xsl" href="RelatorioHTML.xsl"?>-->
+
+<relatório id="1" xmlns:lpr="http://www.dei.isep.ipp.pt/lprog" lpr:noNameschemaLocation="Relatorio.xsd">
+
+
+    -
+    <lpr:páginaRosto>
+
+        <lpr:tema>Gestão do Chão de Fábrica</lpr:tema>
+
+        -
+        <lpr:disciplina id="LPROG">
+
+            <lpr:designação>Linguagens e Programação</lpr:designação>
+
+            <lpr:anoCurricular>2</lpr:anoCurricular>
+
+            <lpr:sigla>LPROG</lpr:sigla>
+
+        </lpr:disciplina>
+
+        -
+        <lpr:autor>
+
+            <lpr:nome>José Diogo Guedes</lpr:nome>
+
+            <lpr:número>1170617</lpr:número>
+
+            <lpr:mail>1170617@isep.ipp.pt</lpr:mail>
+
+        </lpr:autor>
+
+
+        -
+        <lpr:autor>
+
+            <lpr:nome>André Silva</lpr:nome>
+
+            <lpr:número>1171060</lpr:número>
+
+            <lpr:mail>1171060@isep.ipp.pt</lpr:mail>
+
+        </lpr:autor>
+
+
+        -
+        <lpr:autor>
+
+            <lpr:nome>Paulo Moreira</lpr:nome>
+
+            <lpr:número>1180788</lpr:número>
+
+            <lpr:mail>1180788@isep.ipp.pt</lpr:mail>
+
+        </lpr:autor>
+
+
+        -
+        <lpr:autor>
+
+            <lpr:nome>Miguel Sousa</lpr:nome>
+
+            <lpr:número>1180813</lpr:número>
+
+            <lpr:mail>1180813@isep.ipp.pt</lpr:mail>
+
+        </lpr:autor>
+
+        <lpr:turma>2DE</lpr:turma>
+
+        <lpr:professor tipoAula="TP" sigla=""/>
+
+        <lpr:professor tipoAula="PL" sigla="PDF"/>
+
+        <lpr:logotipoDEI>https://www.dei.isep.ipp.pt/images/logo.png</lpr:logotipoDEI>
+
+        <lpr:data>2020-06-13</lpr:data>
+
+    </lpr:páginaRosto>
+
+
+    -
+    <lpr:corpo id="2">
+
+
+        -
+        <lpr:introdução id="SEC001" tituloSecção="Introdução">
+
+            <lpr:subsecção id="SUBSEC001">O objetivo deste trabalho é fazer uma simulação de uma possível gestão de chão
+                de fábrica.
+            </lpr:subsecção>
+
+            <lpr:parágrafo>
+                O objetivo do programa é gerir o envio de mensagens entre as máquinas, bem como as linhas de produção,
+                produtos e ordens de Produção.
+            </lpr:parágrafo>
+
+            -
+            <lpr:parágrafo>
+
+                <lpr:negrito>É importante uma boa gestão para a obter um bom funcionamento da fábrica.</lpr:negrito>
+
+            </lpr:parágrafo>
+
+            -
+            <lpr:parágrafo>
+
+                <lpr:sublinhado>
+                    Criamos um ficheiro XSD para a validação do ficheiro XML.
+                </lpr:sublinhado>
+
+            </lpr:parágrafo>
+
+            -
+            <lpr:parágrafo>
+
+                <lpr:sublinhado>
+                    No final é tudo guardado num fixeiro XML.
+                </lpr:sublinhado>
+
+            </lpr:parágrafo>
+
+        </lpr:introdução>
+
+        -
+        <lpr:outrasSecções>
+
+            -
+            <lpr:análise id="SEC002" tituloSecção="Análise">
+
+                -
+                <lpr:subsecção id="SUBSEC002">
+
+                    -
+                    <lpr:parágrafo>
+
+                        <lpr:negrito>
+
+                            Desenvolver um programa que permita gerir o chão de uma fábrica.
+
+                        </lpr:negrito>
+
+                    </lpr:parágrafo>
+
+
+                    -
+                    <lpr:parágrafo>
+
+                        <lpr:negrito>Essa solução deve permitir que os gerentes da fábrica:</lpr:negrito>
+
+                        <lpr:negrito>Enviem messages</lpr:negrito>
+
+                        <lpr:negrito>Recebam messages</lpr:negrito>
+
+                        <lpr:negrito>Exportar a informação.</lpr:negrito>
+
+                    </lpr:parágrafo>
+
+                    <lpr:parágrafo>
+                        Criamos um XML que contém todos os dados e um XSD para o validar.
+                    </lpr:parágrafo>
+
+                </lpr:subsecção>
+
+            </lpr:análise>
+
+
+            -
+            <lpr:linguagem id="SEC003" tituloSecção="Linguagem">
+                -
+                <lpr:subsecção id="SUBSEC003">
+
+
+                    -
+                    <lpr:parágrafo>
+
+                        <lpr:negrito>
+                            Arquivos finais:
+                        </lpr:negrito>
+
+
+                        -
+                        <lpr:parágrafo>
+
+                            <lpr:negrito>3 arquivos HTML</lpr:negrito>
+
+                        </lpr:parágrafo>
+
+
+                        -
+                        <lpr:parágrafo>
+
+                            <lpr:negrito>2 arquivos XML</lpr:negrito>
+
+                        </lpr:parágrafo>
+
+
+                        -
+                        <lpr:parágrafo>
+
+                            <lpr:negrito>4 arquivos XSD</lpr:negrito>
+
+                        </lpr:parágrafo>
+
+
+                        -
+                        <lpr:parágrafo>
+
+                            <lpr:negrito>3 arquivos JSON</lpr:negrito>
+
+                        </lpr:parágrafo>
+
+
+                        -
+                        <lpr:parágrafo>
+
+                            <lpr:negrito>3 arquivos TXT.</lpr:negrito>
+
+                        </lpr:parágrafo>
+
+                    </lpr:parágrafo>
+
+                </lpr:subsecção>
+
+
+                -
+                <lpr:listaItems>
+
+
+                    <lpr:item label="Ficheiro XML">ChaoDeFabrica.xml</lpr:item>
+
+                    <lpr:item label="Ficheiro XML">Relatorio.xml</lpr:item>
+
+                    <lpr:item label="Ficheiro XSD">ChaoDeFabrica.xsd</lpr:item>
+
+                    <lpr:item label="Ficheiro XSD">RelatorioComplexTypes.xsd</lpr:item>
+
+                    <lpr:item label="Ficheiro XSD">RelatorioSimpleTypes.xsd</lpr:item>
+
+                    <lpr:item label="Ficheiro XSD">Relatorio.xsd</lpr:item>
+
+                    <lpr:item label="Ficheiro XSL">ChaoDeFabricaHTML.xsl</lpr:item>
+
+                    <lpr:item label="Ficheiro XSL">ChaoDeFabricaHTML2.xsl</lpr:item>
+
+                    <lpr:item label="Ficheiro XSL">ChaoDeFabricaHTML3.xsl</lpr:item>
+
+                    <lpr:item label="Ficheiro XSL">ChaoDeFabricaJSON.xsl</lpr:item>
+
+                    <lpr:item label="Ficheiro XSL">ChaoDeFabricaJSON2.xsl</lpr:item>
+
+                    <lpr:item label="Ficheiro XSL">ChaoDeFabricaJSON3.xsl</lpr:item>
+
+                    <lpr:item label="Ficheiro XSL">ChaoDeFabricaTXT.xsl</lpr:item>
+
+                    <lpr:item label="Ficheiro XSL">ChaoDeFabricaTXT2.xsl</lpr:item>
+
+                    <lpr:item label="Ficheiro XSL">ChaoDeFabricaTXT3.xsl</lpr:item>
+
+                    <lpr:item label="Ficheiro HTML">ChaoDeFabrica.html</lpr:item>
+
+                    <lpr:item label="Ficheiro HTML">ChaoDeFabrica2.html</lpr:item>
+
+                    <lpr:item label="Ficheiro HTML">ChaoDeFabrica3.html</lpr:item>
+
+                    <lpr:item label="Ficheiro TXT">ChaoDeFabrica.txt</lpr:item>
+
+                    <lpr:item label="Ficheiro TXT">ChaoDeFabrica2.txt</lpr:item>
+
+                    <lpr:item label="Ficheiro TXT">ChaoDeFabrica3.txt</lpr:item>
+
+                    <lpr:item label="Ficheiro JSON">ChaoDeFabrica.json</lpr:item>
+
+                    <lpr:item label="Ficheiro JSON">ChaoDeFabrica2.json</lpr:item>
+
+                    <lpr:item label="Ficheiro JSON">ChaoDeFabrica3.json</lpr:item>
+
+                </lpr:listaItems>
+
+            </lpr:linguagem>
+
+
+            -
+            <lpr:transformações id="SEC004" tituloSecção="Transformações">
+
+                -
+                <lpr:subsecção id="SUBSEC004">
+
+                    -
+                    <lpr:parágrafo>
+
+                        <lpr:negrito>
+                            Nós transformamos o ficheiro XML de forma a que fosse possível ter novos
+                            formatos como nos era pedido.
+                        </lpr:negrito>
+
+                    </lpr:parágrafo>
+
+                </lpr:subsecção>
+
+            </lpr:transformações>
+
+        </lpr:outrasSecções>
+
+
+        -
+        <lpr:conclusão id="SEC005" tituloSecção="Conclusão">
+
+            -
+            <lpr:subsecção id="string">
+
+                <lpr:parágrafo>
+                    Neste projeto, decidimos entre o grupo destribuir os UCs de maneira a que
+                    o esforço seja igualmente repartido por todos os elementos.
+                </lpr:parágrafo>
+
+                <lpr:parágrafo>
+                    Visto que temos apenas um elemento no nosso grupo de LAPR que não etá inscrito à cadeira
+                    de LPROG, atribuimo-lhe UCs relativas às outras cadeiras.
+
+                </lpr:parágrafo>
+
+                <lpr:parágrafo>
+                    Neste sprint apenas 2 elementos do grupo trabalharam mais a fundo em LPROG mas
+                    contaram com o apoio dos restantes elementos da equipa.
+                </lpr:parágrafo>
+
+                <lpr:parágrafo>
+                    Concluindo, achamos que fizemos um bom trabalho e cumprimos com o que nos era
+                    proposto a nível das UCs de LPROG.
+                </lpr:parágrafo>
+            </lpr:subsecção>
+        </lpr:conclusão>
+
+        -
+        <lpr:referências id="SEC006" tituloSecção="Referências">
+
+            -
+            <lpr:refWeb idRef="RefW_1">
+
+                <lpr:URL>https://www.w3schools.com</lpr:URL>
+
+                <lpr:descrição>W3 Schools</lpr:descrição>
+
+                <lpr:consultadoEm>2012-04-24</lpr:consultadoEm>
+
+            </lpr:refWeb>
+
+            <lpr:refWeb idRef="RefW_2">
+                <lpr:URL>http://www.bizcoder.com/convert-xml-to-json-using-xslt</lpr:URL>
+
+                <lpr:descrição>Bizcoder</lpr:descrição>
+
+                <lpr:consultadoEm>2010-02-12</lpr:consultadoEm>
+            </lpr:refWeb>
+
+        </lpr:referências>
+
+    </lpr:corpo>
+
+    -
+    <lpr:anexos id="ANX001" tituloSecção="Anexos">
+        <lpr:item label="Ficheiro CSS">Style.css</lpr:item>
+    </lpr:anexos>
+
+</relatório>

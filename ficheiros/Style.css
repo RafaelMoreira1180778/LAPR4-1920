@@ -1,0 +1,23 @@
+body {
+    background-image: url("giphy.gif");
+}
+
+table {
+    background-color: #d9ffd9;
+}
+
+h1 {
+    background: white;
+    color: black;
+    display: table;
+    list-style-type: none;
+    padding: 2px 10px;
+}
+
+h2 {
+    background: white;
+    color: black;
+    display: table;
+    list-style-type: none;
+    padding: 2px 10px;
+}

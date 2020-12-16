@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--<?xml-stylesheet type="text/xsl" href="ChaoDeFabricaHTML.xsl"?>-->
+<ChaoDeFabrica xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNameschemaLocation="ChaoDeFabrica.xsd">
+    <MateriasPrimas>
+        <MateriaPrima id="MP1">
+            <Descricao>DESC1</Descricao>
+        </MateriaPrima>
+        <MateriaPrima id="MP2">
+            <Descricao>DESC2</Descricao>
+        </MateriaPrima>
+        <MateriaPrima id="MP3">
+            <Descricao>DESC3</Descricao>
+        </MateriaPrima>
+    </MateriasPrimas>
+    <CategoriasMateriasPrimas>
+        <CategoriaMateriasPrimas id="C1"/>
+        <CategoriaMateriasPrimas id="C2"/>
+        <CategoriaMateriasPrimas id="C3"/>
+    </CategoriasMateriasPrimas>
+    <Produtos>
+        <Produto id="PD1">
+            <IDComercial>IDC1</IDComercial>
+            <DescricaoBreve>DESC1</DescricaoBreve>
+            <DescricaoCompleta>Descricao1</DescricaoCompleta>
+            <Unidade>50</Unidade>
+            <IDCategoria>123</IDCategoria>
+        </Produto>
+        <Produto id="PD2">
+            <IDComercial>IDC2</IDComercial>
+            <DescricaoBreve>DESC2</DescricaoBreve>
+            <DescricaoCompleta>Descricao2</DescricaoCompleta>
+            <Unidade>30</Unidade>
+            <IDCategoria>131</IDCategoria>
+        </Produto>
+        <Produto id="PD3">
+            <IDComercial>IDC3</IDComercial>
+            <DescricaoBreve>DESC3</DescricaoBreve>
+            <DescricaoCompleta>Descricao3</DescricaoCompleta>
+            <Unidade>20</Unidade>
+            <IDCategoria>132</IDCategoria>
+        </Produto>
+    </Produtos>
+    <LinhasProducao>
+        <LinhaProducao id="LP1"/>
+        <LinhaProducao id="LP2"/>
+        <LinhaProducao id="LP3"/>
+    </LinhasProducao>
+    <Encomendas>
+        <Encomenda id="E001">
+            <OrdemProducao id="OP1"/>
+            <OrdemProducao id="OP2"/>
+            <OrdemProducao id="OP3"/>
+        </Encomenda>
+        <Encomenda id="E002">
+            <OrdemProducao id="OP1"/>
+            <OrdemProducao id="OP2"/>
+            <OrdemProducao id="OP3"/>
+            <OrdemProducao id="OP1"/>
+            <OrdemProducao id="OP2"/>
+            <OrdemProducao id="OP3"/>
+        </Encomenda>
+        <Encomenda id="E003">
+            <OrdemProducao id="OP1"/>
+            <OrdemProducao id="OP2"/>
+            <OrdemProducao id="OP3"/>
+            <OrdemProducao id="OP1"/>
+            <OrdemProducao id="OP2"/>
+            <OrdemProducao id="OP3"/>
+            <OrdemProducao id="OP1"/>
+            <OrdemProducao id="OP2"/>
+            <OrdemProducao id="OP3"/>
+        </Encomenda>
+    </Encomendas>
+    <Maquinas>
+        <Maquina id="M30">
+            <numeroSerie>12345</numeroSerie>
+            <Fabricante>LG</Fabricante>
+            <Modelo>LG321</Modelo>
+            <AnoFabrico>2020</AnoFabrico>
+            <Descricao>DESC1</Descricao>
+            <Instalacao>
+                <Data>2020/4/4</Data>
+                <Hora>06:30:00</Hora>
+            </Instalacao>
+        </Maquina>
+        <Maquina id="M31">
+            <numeroSerie>15421</numeroSerie>
+            <Fabricante>Becken</Fabricante>
+            <Modelo>B32</Modelo>
+            <AnoFabrico>2020</AnoFabrico>
+            <Descricao>DESC1</Descricao>
+            <Instalacao>
+                <Data>2020/4/5</Data>
+                <Hora>05:30:00</Hora>
+            </Instalacao>
+        </Maquina>
+        <Maquina id="M32">
+            <numeroSerie>13421</numeroSerie>
+            <Fabricante>LG</Fabricante>
+            <Modelo>LG541</Modelo>
+            <AnoFabrico>2020</AnoFabrico>
+            <Descricao>DESC1</Descricao>
+            <Instalacao>
+                <Data>2020/4/6</Data>
+                <Hora>02:40:00</Hora>
+            </Instalacao>
+        </Maquina>
+    </Maquinas>
+    <Depositos>
+        <Deposito id="D1">
+            <Descricao>desc1</Descricao>
+        </Deposito>
+        <Deposito id="D2">
+            <Descricao>desc1</Descricao>
+        </Deposito>
+        <Deposito id="D3">
+            <Descricao>desc1</Descricao>
+        </Deposito>
+    </Depositos>
+    <OrdensProducao>
+        <OrdemProducao id="OP1">
+            <Produto id="PD1"/>
+            <DataEmissao>2020/2/4</DataEmissao>
+            <DataPrevisao>2020/2/6</DataPrevisao>
+            <encomendas/>
+            <Quantidade>1200</Quantidade>
+            <UnidadeMedida>UN</UnidadeMedida>
+        </OrdemProducao>
+        <OrdemProducao id="OP2">
+            <Produto id="PD2"/>
+            <DataEmissao>2020/2/4</DataEmissao>
+            <DataPrevisao>2020/2/6</DataPrevisao>
+            <encomendas/>
+            <Quantidade>6000</Quantidade>
+            <UnidadeMedida>UN</UnidadeMedida>
+        </OrdemProducao>
+        <OrdemProducao id="OP3">
+            <Produto id="PD3"/>
+            <DataEmissao>2020/2/4</DataEmissao>
+            <DataPrevisao>2020/2/6</DataPrevisao>
+            <encomendas/>
+            <Quantidade>500</Quantidade>
+            <UnidadeMedida>UN</UnidadeMedida>
+        </OrdemProducao>
+    </OrdensProducao>
+</ChaoDeFabrica>

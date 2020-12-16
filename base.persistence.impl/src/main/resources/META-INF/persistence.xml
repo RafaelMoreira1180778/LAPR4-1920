@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence">
+    <persistence-unit name="eapli.base">
+        <!--      <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>-->
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+
+        <class>eapli.framework.infrastructure.authz.domain.model.SystemUser</class>
+        <class>eapli.framework.infrastructure.authz.domain.model.Role</class>
+        <class>eapli.framework.infrastructure.authz.domain.model.RoleSet</class>
+        <class>eapli.framework.infrastructure.authz.domain.model.RoleAssignment</class>
+        <class>eapli.base.clientusermanagement.domain.ClientUser</class>
+        <class>eapli.base.clientusermanagement.domain.SignupRequest</class>
+        <class>eapli.base.machinemanagement.domain.Maquina</class>
+        <class>eapli.base.rawmaterialmanagement.domain.CategoriaMateriaPrima</class>
+        <class>eapli.base.rawmaterialmanagement.domain.RawMaterial</class>
+        <class>eapli.base.productmanagement.domain.Produto</class>
+        <class>eapli.base.productmanagement.domain.FichaProducao</class>
+        <class>eapli.base.productionlinemanagement.domain.LinhaProducao</class>
+        <class>eapli.base.depositsmanagement.domain.Depositos</class>
+        <class>eapli.base.productionordermanagement.domain.OrdemProducao</class>
+        <class>eapli.base.notifications.domain.Notification</class>
+        <class>eapli.base.ordersmanagement.domain.Encomenda</class>
+        <class>eapli.base.messages.domain.ActivityStopMessage</class>
+        <class>eapli.base.messages.domain.ChargebackMessage</class>
+        <class>eapli.base.messages.domain.ConsumptionMessage</class>
+        <class>eapli.base.messages.domain.EndOfActivityMessage</class>
+        <class>eapli.base.messages.domain.ProductionDeliveryMessage</class>
+        <class>eapli.base.messages.domain.ProductionMessage</class>
+        <class>eapli.base.messages.domain.ReturnActivityMessage</class>
+        <class>eapli.base.messages.domain.StartActivityMessage</class>
+        <class>eapli.base.messages.domain.Message</class>
+        <class>eapli.base.productmanagement.domain.FichaProducao</class>
+        <class>eapli.base.productmanagement.domain.Quantidades</class>
+
+        <properties>
+            <property name="javax.persistence.jdbc.url" value="jdbc:h2:~/lapr4;AUTO_SERVER=TRUE"/>
+            <!--            <property name="javax.persistence.jdbc.url" value="jdbc:h2:tcp://localhost/~/lapr4"/>-->
+            <!--            <property name="javax.persistence.jdbc.url" value="jdbc:h2:mem:testdb"/>-->
+            <!--            <property name="javax.persistence.jdbc.url" value="jdbc:h2:..\db\base;MV_STORE=FALSE"/>-->
+            <property name="javax.persistence.jdbc.user" value="sa"/>
+            <property name="javax.persistence.jdbc.password" value="eapli"/>
+            <property name="javax.persistence.jdbc.driver" value="org.h2.Driver"/>
+            <property name="javax.persistence.schema-generation.database.action" value="drop-and-create"/>
+            <property name="eclipselink.logging.level" value="FINE"/>
+            <!--            <property name="hibernate.show_sql" value="true"/>-->
+            <property name="hibernate.dialect" value="org.hibernate.dialect.H2Dialect"/>
+        </properties>
+    </persistence-unit>
+</persistence>

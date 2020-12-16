@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://www.isep.com/ChaoDeFabrica"
+           elementFormDefault="qualified">
+
+    <xs:element name="Company">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="Maquinas" type="Maquinas_Type"/>
+                <xs:element name="Produtos" type="Produtos_Type"/>
+                <xs:element name="Depositos" type="Depositos_Type"/>
+                <xs:element name="MateriasPrimas" type="MateriasPrimas_Type"/>
+                <xs:element name="LinhasProducao" type="LinhasProducao_Type"/>
+                <xs:element name="FichasProducao" type="FichasProducao_Type"/>
+                <xs:element name="OrdensProducao" type="OrdensProducao_Type"/>
+                <xs:element name="CategoriasMateriasPrimas" type="CategoriasMateriasPrimas_Type"/>
+            </xs:sequence>
+            <xs:attribute name="Nome" type="xs:string"/>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="MateriasPrimas_Type">
+        <xs:sequence>
+            <xs:element name="MateriaPrima" type="MateriaPrima_Type" minOccurs="1" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="MateriaPrima_Type">
+
+        <xs:sequence>
+            <xs:element name="Descricao" type="Descricao_Type"/>
+        </xs:sequence>
+        <xs:attribute name="id_MateriaPrima" type="xs:string" use="required"/>
+    </xs:complexType>
+
+    <xs:complexType name="CategoriasMateriasPrimas_Type">
+        <xs:sequence>
+            <xs:element name="CategoriaMateriasPrimas" type="CategoriaMateriasPrimas_Type" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="CategoriaMateriasPrimas_Type">
+        <xs:sequence>
+            <xs:element name="MateriaPrima" type="MateriaPrima_Type" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+        <xs:attribute name="id" type="xs:string"/>
+    </xs:complexType>
+
+
+    <xs:complexType name="Produtos_Type">
+        <xs:sequence>
+            <xs:element name="Produto" type="Produto_Type" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="Produto_Type">
+        <xs:sequence>
+            <xs:element name="DescricaoBreve" type="Descricao_Type"/>
+            <xs:element name="DescricaoCompleta" type="Descricao_Type"/>
+            <xs:element name="Unidade" type="Quantidades_Type"/>
+            <xs:element name="IDCategoria" type="Categoria_Type"/>
+        </xs:sequence>
+        <xs:attribute name="IDComercial" type="xs:string"/>
+    </xs:complexType>
+
+    <xs:complexType name="Quantidades_Type">
+        <xs:sequence>
+            <xs:element name="Unidade" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="Categoria_Type">
+        <xs:sequence>
+            <xs:element name="idCategoria" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="LinhasProducao_Type">
+        <xs:sequence>
+            <xs:element name="LinhaProducao" type="LinhaProducao_Type" maxOccurs="unbounded"/>
+        </xs:sequence>
+        <xs:attribute name="id_LinhaProducao" type="xs:string" use="required"/>
+    </xs:complexType>
+
+    <xs:complexType name="LinhaProducao_Type">
+        <xs:sequence>
+            <xs:element name="Maquinas" type="Maquinas_Type" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="Encomendas_Type">
+        <xs:sequence>
+            <xs:element name="Encomenda" type="Encomenda_Type" maxOccurs="unbounded"/>
+        </xs:sequence>
+        <xs:attribute name="id_Encomenda" type="xs:string" use="required"/>
+    </xs:complexType>
+
+    <xs:complexType name="Encomenda_Type">
+        <xs:sequence>
+            <xs:element name="OrdemProducao" type="OrdemProducao_Type" minOccurs="1" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="OrdensProducao_Type">
+        <xs:sequence>
+            <xs:element name="OrdemProducao" type="OrdemProducao_Type" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="OrdemProducao_Type">
+        <xs:sequence>
+            <xs:element name="Produto" type="Produto_Type"/>
+            <xs:element name="DataEmissao" type="Date_Type"/>
+            <xs:element name="DataPrevisao" type="xs:string"/>
+            <xs:element name="Encomendas" type="Encomendas_Type"/>
+            <xs:element name="Quantidade" type="Quantidades_Type"/>
+            <xs:element name="UnidadeMedida" type="xs:string"/>
+        </xs:sequence>
+        <xs:attribute name="id" type="xs:string"/>
+    </xs:complexType>
+
+    <xs:complexType name="Maquinas_Type">
+        <xs:sequence>
+            <xs:element name="Maquina" type="Maquina_Type" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="Maquina_Type">
+        <xs:sequence>
+            <xs:element name="numeroSerie" type="xs:integer"/>
+            <xs:element name="Fabricante" type="xs:string"/>
+            <xs:element name="Modelo" type="xs:string"/>
+            <xs:element name="AnoFabrico" type="AnoFabrico_Type"/>
+            <xs:element name="Descricao" type="Descricao_Type"/>
+            <xs:element name="Instalacao" type="Instalacao_Type"/>
+        </xs:sequence>
+        <xs:attribute name="id_Maquina" type="xs:string" use="required"/>
+    </xs:complexType>
+
+    <xs:simpleType name="AnoFabrico_Type">
+        <xs:restriction base="xs:integer">
+            <xs:minInclusive value="1900"/>
+            <xs:maxInclusive value="2020"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:complexType name="Descricao_Type">
+        <xs:sequence>
+            <xs:element name="descStr" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="Instalacao_Type">
+        <xs:sequence>
+            <xs:element name="data" type="Date_Type"/>
+            <xs:element name="time" type="Time_Type"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="Date_Type">
+        <xs:sequence>
+            <xs:element name="ano" type="xs:int"/>
+            <xs:element name="mes" type="xs:int"/>
+            <xs:element name="dia" type="xs:int"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="Time_Type">
+        <xs:sequence>
+            <xs:element name="hora" type="xs:int"/>
+            <xs:element name="minuto" type="xs:int"/>
+            <xs:element name="segundo" type="xs:int"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="Depositos_Type">
+        <xs:sequence>
+            <xs:element name="Depositos" type="Deposito_Type" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="Deposito_Type">
+        <xs:sequence>
+            <xs:element name="Descricao" type="Descricao_Deposito_Type"/>
+        </xs:sequence>
+        <xs:attribute name="id_Deposito" type="xs:string"/>
+    </xs:complexType>
+
+    <xs:complexType name="Descricao_Deposito_Type">
+        <xs:sequence>
+            <xs:element name="descStr" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:complexType name="FichasProducao_Type">
+        <xs:sequence>
+            <xs:element name="FichaProducao" type="FichaProducao_Type" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="FichaProducao_Type">
+        <xs:sequence>
+            <xs:element name="listRawMaterial" type="MateriasPrimas_Type"/>
+            <xs:element name="listQuantidades" type="Quantidades_Type"/>
+        </xs:sequence>
+        <xs:attribute name="idFichaProducao" type="xs:positiveInteger"/>
+    </xs:complexType>
+
+</xs:schema>
